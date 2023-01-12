@@ -242,7 +242,7 @@ class DefaultApi
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
-                function ($response) use ($returnType) {
+                function ($response) use ($returnType): array {
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -299,7 +299,7 @@ class DefaultApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getBrowseNodesRequest($getBrowseNodesRequest)
+    protected function getBrowseNodesRequest($getBrowseNodesRequest): \GuzzleHttp\Psr7\Request
     {
         // verify the required parameter 'getBrowseNodesRequest' is set
         if ($getBrowseNodesRequest === null || (is_array($getBrowseNodesRequest) && count($getBrowseNodesRequest) === 0)) {
@@ -554,7 +554,7 @@ class DefaultApi
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
-                function ($response) use ($returnType) {
+                function ($response) use ($returnType): array {
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -611,7 +611,7 @@ class DefaultApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getItemsRequest($getItemsRequest)
+    protected function getItemsRequest($getItemsRequest): \GuzzleHttp\Psr7\Request
     {
         // verify the required parameter 'getItemsRequest' is set
         if ($getItemsRequest === null || (is_array($getItemsRequest) && count($getItemsRequest) === 0)) {
@@ -866,7 +866,7 @@ class DefaultApi
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
-                function ($response) use ($returnType) {
+                function ($response) use ($returnType): array {
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -923,7 +923,7 @@ class DefaultApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getVariationsRequest($getVariationsRequest)
+    protected function getVariationsRequest($getVariationsRequest): \GuzzleHttp\Psr7\Request
     {
         // verify the required parameter 'getVariationsRequest' is set
         if ($getVariationsRequest === null || (is_array($getVariationsRequest) && count($getVariationsRequest) === 0)) {
@@ -1178,7 +1178,7 @@ class DefaultApi
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
-                function ($response) use ($returnType) {
+                function ($response) use ($returnType): array {
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -1235,7 +1235,7 @@ class DefaultApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function searchItemsRequest($searchItemsRequest)
+    protected function searchItemsRequest($searchItemsRequest): \GuzzleHttp\Psr7\Request
     {
         // verify the required parameter 'searchItemsRequest' is set
         if ($searchItemsRequest === null || (is_array($searchItemsRequest) && count($searchItemsRequest) === 0)) {
@@ -1327,9 +1327,9 @@ class DefaultApi
      * Create http client option
      *
      * @throws \RuntimeException on file opening failure
-     * @return array of http client options
+     * @return never[]|array{debug: resource} of http client options
      */
-    protected function createHttpClientOption()
+    protected function createHttpClientOption(): array
     {
         $options = [];
         if ($this->config->getDebug()) {

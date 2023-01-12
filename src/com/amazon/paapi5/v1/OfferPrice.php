@@ -165,9 +165,9 @@ class OfferPrice implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -196,7 +196,7 @@ class OfferPrice implements ModelInterface, ArrayAccess
      *
      * @return array invalid properties with reasons
      */
-    public function listInvalidProperties()
+    public function listInvalidProperties(): array
     {
         $invalidProperties = [];
 
@@ -209,7 +209,7 @@ class OfferPrice implements ModelInterface, ArrayAccess
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function valid(): bool
     {
         return count($this->listInvalidProperties()) === 0;
     }
@@ -220,7 +220,7 @@ class OfferPrice implements ModelInterface, ArrayAccess
      *
      * @return float
      */
-    public function getAmount()
+    public function getAmount(): float
     {
         return $this->container['amount'];
     }
@@ -232,7 +232,7 @@ class OfferPrice implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setAmount($amount)
+    public function setAmount($amount): OfferPrice
     {
         $this->container['amount'] = $amount;
 
@@ -244,7 +244,7 @@ class OfferPrice implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getCurrency()
+    public function getCurrency(): string
     {
         return $this->container['currency'];
     }
@@ -256,7 +256,7 @@ class OfferPrice implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setCurrency($currency)
+    public function setCurrency($currency): OfferPrice
     {
         $this->container['currency'] = $currency;
 
@@ -268,7 +268,7 @@ class OfferPrice implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getDisplayAmount()
+    public function getDisplayAmount(): string
     {
         return $this->container['displayAmount'];
     }
@@ -280,7 +280,7 @@ class OfferPrice implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setDisplayAmount($displayAmount)
+    public function setDisplayAmount($displayAmount): OfferPrice
     {
         $this->container['displayAmount'] = $displayAmount;
 
@@ -292,7 +292,7 @@ class OfferPrice implements ModelInterface, ArrayAccess
      *
      * @return float
      */
-    public function getPricePerUnit()
+    public function getPricePerUnit(): float
     {
         return $this->container['pricePerUnit'];
     }
@@ -304,7 +304,7 @@ class OfferPrice implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setPricePerUnit($pricePerUnit)
+    public function setPricePerUnit($pricePerUnit): OfferPrice
     {
         $this->container['pricePerUnit'] = $pricePerUnit;
 
@@ -316,7 +316,7 @@ class OfferPrice implements ModelInterface, ArrayAccess
      *
      * @return \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferSavings
      */
-    public function getSavings()
+    public function getSavings(): OfferSavings
     {
         return $this->container['savings'];
     }
@@ -328,7 +328,7 @@ class OfferPrice implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setSavings($savings)
+    public function setSavings($savings): OfferPrice
     {
         $this->container['savings'] = $savings;
 
@@ -341,7 +341,7 @@ class OfferPrice implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -353,7 +353,7 @@ class OfferPrice implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -366,7 +366,7 @@ class OfferPrice implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -382,7 +382,7 @@ class OfferPrice implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }
@@ -392,7 +392,7 @@ class OfferPrice implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
             return json_encode(

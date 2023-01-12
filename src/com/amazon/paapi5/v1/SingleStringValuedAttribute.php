@@ -120,7 +120,7 @@ class SingleStringValuedAttribute implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function attributeMap()
+    public static function attributeMap(): array
     {
         return self::$attributeMap;
     }
@@ -130,7 +130,7 @@ class SingleStringValuedAttribute implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function setters()
+    public static function setters(): array
     {
         return self::$setters;
     }
@@ -140,7 +140,7 @@ class SingleStringValuedAttribute implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function getters()
+    public static function getters(): array
     {
         return self::$getters;
     }
@@ -150,14 +150,14 @@ class SingleStringValuedAttribute implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getModelName()
+    public function getModelName(): string
     {
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -184,7 +184,7 @@ class SingleStringValuedAttribute implements ModelInterface, ArrayAccess
      *
      * @return array invalid properties with reasons
      */
-    public function listInvalidProperties()
+    public function listInvalidProperties(): array
     {
         $invalidProperties = [];
 
@@ -197,7 +197,7 @@ class SingleStringValuedAttribute implements ModelInterface, ArrayAccess
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function valid(): bool
     {
         return count($this->listInvalidProperties()) === 0;
     }
@@ -208,7 +208,7 @@ class SingleStringValuedAttribute implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getDisplayValue()
+    public function getDisplayValue(): string
     {
         return $this->container['displayValue'];
     }
@@ -220,7 +220,7 @@ class SingleStringValuedAttribute implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setDisplayValue($displayValue)
+    public function setDisplayValue($displayValue): SingleStringValuedAttribute
     {
         $this->container['displayValue'] = $displayValue;
 
@@ -232,7 +232,7 @@ class SingleStringValuedAttribute implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getLabel()
+    public function getLabel(): string
     {
         return $this->container['label'];
     }
@@ -244,7 +244,7 @@ class SingleStringValuedAttribute implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setLabel($label)
+    public function setLabel($label): SingleStringValuedAttribute
     {
         $this->container['label'] = $label;
 
@@ -256,7 +256,7 @@ class SingleStringValuedAttribute implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getLocale()
+    public function getLocale(): string
     {
         return $this->container['locale'];
     }
@@ -268,7 +268,7 @@ class SingleStringValuedAttribute implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setLocale($locale)
+    public function setLocale($locale): SingleStringValuedAttribute
     {
         $this->container['locale'] = $locale;
 
@@ -281,7 +281,7 @@ class SingleStringValuedAttribute implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -293,7 +293,7 @@ class SingleStringValuedAttribute implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -306,7 +306,7 @@ class SingleStringValuedAttribute implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -322,7 +322,7 @@ class SingleStringValuedAttribute implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }
@@ -332,7 +332,7 @@ class SingleStringValuedAttribute implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
             return json_encode(

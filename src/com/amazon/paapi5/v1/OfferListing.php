@@ -83,7 +83,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerTypes()
+    public static function swaggerTypes(): array
     {
         return self::$swaggerTypes;
     }
@@ -93,7 +93,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerFormats()
+    public static function swaggerFormats(): array
     {
         return self::$swaggerFormats;
     }
@@ -165,7 +165,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function attributeMap()
+    public static function attributeMap(): array
     {
         return self::$attributeMap;
     }
@@ -175,7 +175,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function setters()
+    public static function setters(): array
     {
         return self::$setters;
     }
@@ -185,7 +185,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function getters()
+    public static function getters(): array
     {
         return self::$getters;
     }
@@ -195,14 +195,10 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getModelName()
+    public function getModelName(): array
     {
         return self::$swaggerModelName;
     }
-
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -238,7 +234,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return array invalid properties with reasons
      */
-    public function listInvalidProperties()
+    public function listInvalidProperties(): array
     {
         $invalidProperties = [];
 
@@ -251,7 +247,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function valid(): bool
     {
         return count($this->listInvalidProperties()) === 0;
     }
@@ -262,7 +258,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferAvailability
      */
-    public function getAvailability()
+    public function getAvailability(): OfferAvailability
     {
         return $this->container['availability'];
     }
@@ -274,7 +270,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setAvailability($availability)
+    public function setAvailability($availability): OfferListing
     {
         $this->container['availability'] = $availability;
 
@@ -286,7 +282,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferCondition
      */
-    public function getCondition()
+    public function getCondition(): OfferCondition
     {
         return $this->container['condition'];
     }
@@ -298,7 +294,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setCondition($condition)
+    public function setCondition($condition): OfferListings
     {
         $this->container['condition'] = $condition;
 
@@ -310,7 +306,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferDeliveryInfo
      */
-    public function getDeliveryInfo()
+    public function getDeliveryInfo(): OfferDeliveryInfo
     {
         return $this->container['deliveryInfo'];
     }
@@ -322,7 +318,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setDeliveryInfo($deliveryInfo)
+    public function setDeliveryInfo($deliveryInfo): OfferListing
     {
         $this->container['deliveryInfo'] = $deliveryInfo;
 
@@ -334,7 +330,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getId()
+    public function getId(): string
     {
         return $this->container['id'];
     }
@@ -346,7 +342,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setId($id)
+    public function setId($id): OfferListing
     {
         $this->container['id'] = $id;
 
@@ -358,7 +354,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return bool
      */
-    public function getIsBuyBoxWinner()
+    public function getIsBuyBoxWinner(): bool
     {
         return $this->container['isBuyBoxWinner'];
     }
@@ -370,7 +366,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setIsBuyBoxWinner($isBuyBoxWinner)
+    public function setIsBuyBoxWinner($isBuyBoxWinner): OfferListing
     {
         $this->container['isBuyBoxWinner'] = $isBuyBoxWinner;
 
@@ -382,7 +378,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferLoyaltyPoints
      */
-    public function getLoyaltyPoints()
+    public function getLoyaltyPoints(): OfferLoyaltyPoints
     {
         return $this->container['loyaltyPoints'];
     }
@@ -394,7 +390,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setLoyaltyPoints($loyaltyPoints)
+    public function setLoyaltyPoints($loyaltyPoints): OfferListing
     {
         $this->container['loyaltyPoints'] = $loyaltyPoints;
 
@@ -406,7 +402,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferMerchantInfo
      */
-    public function getMerchantInfo()
+    public function getMerchantInfo(): OfferMerchantInfo
     {
         return $this->container['merchantInfo'];
     }
@@ -418,7 +414,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setMerchantInfo($merchantInfo)
+    public function setMerchantInfo($merchantInfo): OfferListing
     {
         $this->container['merchantInfo'] = $merchantInfo;
 
@@ -430,7 +426,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferPrice
      */
-    public function getPrice()
+    public function getPrice(): OfferPrice
     {
         return $this->container['price'];
     }
@@ -442,7 +438,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setPrice($price)
+    public function setPrice($price): OfferListing
     {
         $this->container['price'] = $price;
 
@@ -454,7 +450,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferProgramEligibility
      */
-    public function getProgramEligibility()
+    public function getProgramEligibility(): OfferProgramEligibility
     {
         return $this->container['programEligibility'];
     }
@@ -466,7 +462,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setProgramEligibility($programEligibility)
+    public function setProgramEligibility($programEligibility): OfferListing
     {
         $this->container['programEligibility'] = $programEligibility;
 
@@ -490,7 +486,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setPromotions($promotions)
+    public function setPromotions($promotions): OfferListing
     {
         $this->container['promotions'] = $promotions;
 
@@ -502,7 +498,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferPrice
      */
-    public function getSavingBasis()
+    public function getSavingBasis(): OfferPrice
     {
         return $this->container['savingBasis'];
     }
@@ -514,7 +510,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setSavingBasis($savingBasis)
+    public function setSavingBasis($savingBasis): OfferListing
     {
         $this->container['savingBasis'] = $savingBasis;
 
@@ -526,7 +522,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return bool
      */
-    public function getViolatesMAP()
+    public function getViolatesMAP(): bool
     {
         return $this->container['violatesMAP'];
     }
@@ -538,7 +534,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setViolatesMAP($violatesMAP)
+    public function setViolatesMAP($violatesMAP): OfferListing
     {
         $this->container['violatesMAP'] = $violatesMAP;
 
@@ -551,7 +547,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -563,7 +559,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -576,7 +572,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -592,7 +588,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }
@@ -602,7 +598,7 @@ class OfferListing implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
             return json_encode(

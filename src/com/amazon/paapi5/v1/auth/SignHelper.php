@@ -182,7 +182,7 @@ class SignHelper
      * @param string data
      * @return string hex code
      */
-    private function generateHex($data)
+    private function generateHex($data): string
     {
         return hash('sha256', $data);
     }
@@ -211,7 +211,7 @@ class SignHelper
      * Get timestamp. yyyyMMdd'T'HHmmss'Z'
      * @return string timestamp in required format
      */
-    private function getTimeStamp()
+    private function getTimeStamp(): string
     {
         return gmdate('Ymd\THis\Z');
     }
@@ -220,7 +220,7 @@ class SignHelper
      * Get date. yyyyMMdd
      * @return object GMT date
      */
-    private function getDate()
+    private function getDate(): string
     {
         return gmdate('Ymd');
     }

@@ -36,7 +36,7 @@ class PartnerType
      * Gets allowable values of the enum
      * @return string[]
      */
-    public static function getAllowableEnumValues()
+    public static function getAllowableEnumValues(): array
     {
         return [
             self::ASSOCIATES,

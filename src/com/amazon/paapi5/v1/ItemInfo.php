@@ -160,7 +160,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function attributeMap()
+    public static function attributeMap():array
     {
         return self::$attributeMap;
     }
@@ -170,7 +170,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function setters()
+    public static function setters():array
     {
         return self::$setters;
     }
@@ -180,7 +180,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function getters()
+    public static function getters():array0
     {
         return self::$getters;
     }
@@ -190,14 +190,14 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getModelName()
+    public function getModelName():string
     {
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -232,7 +232,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return array invalid properties with reasons
      */
-    public function listInvalidProperties()
+    public function listInvalidProperties(): array
     {
         $invalidProperties = [];
 
@@ -245,7 +245,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function valid(): bool
     {
         return count($this->listInvalidProperties()) === 0;
     }
@@ -268,7 +268,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setByLineInfo($byLineInfo)
+    public function setByLineInfo($byLineInfo): ItemInfo
     {
         $this->container['byLineInfo'] = $byLineInfo;
 
@@ -280,7 +280,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\Classifications
      */
-    public function getClassifications()
+    public function getClassifications(): Classifications
     {
         return $this->container['classifications'];
     }
@@ -292,7 +292,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setClassifications($classifications)
+    public function setClassifications($classifications):ItemInfo
     {
         $this->container['classifications'] = $classifications;
 
@@ -304,7 +304,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\ContentInfo
      */
-    public function getContentInfo()
+    public function getContentInfo(): ContentInfo
     {
         return $this->container['contentInfo'];
     }
@@ -316,7 +316,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setContentInfo($contentInfo)
+    public function setContentInfo($contentInfo): ItemInfo
     {
         $this->container['contentInfo'] = $contentInfo;
 
@@ -328,7 +328,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\ContentRating
      */
-    public function getContentRating()
+    public function getContentRating(): ContentRating
     {
         return $this->container['contentRating'];
     }
@@ -340,7 +340,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setContentRating($contentRating)
+    public function setContentRating($contentRating): ItemInfo
     {
         $this->container['contentRating'] = $contentRating;
 
@@ -352,7 +352,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\ExternalIds
      */
-    public function getExternalIds()
+    public function getExternalIds(): ExternalIds
     {
         return $this->container['externalIds'];
     }
@@ -364,7 +364,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setExternalIds($externalIds)
+    public function setExternalIds($externalIds): ItemInfo
     {
         $this->container['externalIds'] = $externalIds;
 
@@ -376,7 +376,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\MultiValuedAttribute
      */
-    public function getFeatures()
+    public function getFeatures(): MultiValuedAttribute
     {
         return $this->container['features'];
     }
@@ -388,7 +388,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setFeatures($features)
+    public function setFeatures($features): ItemInfo
     {
         $this->container['features'] = $features;
 
@@ -400,7 +400,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\ManufactureInfo
      */
-    public function getManufactureInfo()
+    public function getManufactureInfo(): ManufactureInfo
     {
         return $this->container['manufactureInfo'];
     }
@@ -412,7 +412,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setManufactureInfo($manufactureInfo)
+    public function setManufactureInfo($manufactureInfo): ItemInfo
     {
         $this->container['manufactureInfo'] = $manufactureInfo;
 
@@ -424,7 +424,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\ProductInfo
      */
-    public function getProductInfo()
+    public function getProductInfo(): ProductInfo
     {
         return $this->container['productInfo'];
     }
@@ -436,7 +436,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setProductInfo($productInfo)
+    public function setProductInfo($productInfo): ItemInfo
     {
         $this->container['productInfo'] = $productInfo;
 
@@ -448,7 +448,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\TechnicalInfo
      */
-    public function getTechnicalInfo()
+    public function getTechnicalInfo(): TechnicalInfo
     {
         return $this->container['technicalInfo'];
     }
@@ -460,7 +460,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setTechnicalInfo($technicalInfo)
+    public function setTechnicalInfo($technicalInfo): ItemInfo
     {
         $this->container['technicalInfo'] = $technicalInfo;
 
@@ -472,7 +472,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SingleStringValuedAttribute
      */
-    public function getTitle()
+    public function getTitle(): SingleStringValuedAttribute
     {
         return $this->container['title'];
     }
@@ -484,7 +484,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setTitle($title)
+    public function setTitle($title): ItemInfo
     {
         $this->container['title'] = $title;
 
@@ -496,7 +496,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\TradeInInfo
      */
-    public function getTradeInInfo()
+    public function getTradeInInfo(): TradeInInfo
     {
         return $this->container['tradeInInfo'];
     }
@@ -508,7 +508,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setTradeInInfo($tradeInInfo)
+    public function setTradeInInfo($tradeInInfo): ItemInfo
     {
         $this->container['tradeInInfo'] = $tradeInInfo;
 
@@ -521,7 +521,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -533,7 +533,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -546,7 +546,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -562,7 +562,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }
@@ -572,7 +572,7 @@ class ItemInfo implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
             return json_encode(
