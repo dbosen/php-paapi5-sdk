@@ -424,9 +424,9 @@ class OfferListing implements ModelInterface, ArrayAccess
     /**
      * Gets price
      *
-     * @return \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferPrice
+     * @return \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferPrice|null
      */
-    public function getPrice(): OfferPrice
+    public function getPrice(): ?OfferPrice
     {
         return $this->container['price'];
     }
